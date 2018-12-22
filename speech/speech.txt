@@ -1,0 +1,55 @@
+# Existing storage space
+AT+FSMEM
+
+# Listing of the directory
+AT+FSLS=C:\User\
+
+# Creates a new file
+AT+FSCREATE=C:\User\welcome.amr
+# Writes bytes into a file --> cat welcome.amr > /dev/ttyS0
+AT+FSWRITE=C:\User\welcome.amr,0,1904,30
+
+AT+FSCREATE=C:\User\pin.amr
+AT+FSWRITE=C:\User\pin.amr,0,2853,30
+
+AT+FSCREATE=C:\User\pin_ok.amr
+AT+FSWRITE=C:\User\pin_ok.amr,0,1605,30
+
+AT+FSCREATE=C:\User\pin_error.amr
+AT+FSWRITE=C:\User\pin_error.amr,0,1878,30
+
+AT+FSCREATE=C:\User\action.amr
+AT+FSWRITE=C:\User\action.amr,0,8014,30
+
+AT+FSCREATE=C:\User\action_ok.amr
+AT+FSWRITE=C:\User\action_ok.amr,0,2866,30
+
+AT+FSCREATE=C:\User\action_error.amr
+AT+FSWRITE=C:\User\action_error.amr,0,2983,30
+
+AT+FSCREATE=C:\User\action_next.amr
+AT+FSWRITE=C:\User\action_next.amr,0,5908,30
+
+AT+FSCREATE=C:\User\goodbye.amr
+AT+FSWRITE=C:\User\goodbye.amr,0,3412,30
+
+# Deletes a file
+AT+FSDEL=C:\User\welcome.amr
+
+# Plays a file
+AT+CREC=4,"C:\User\welcome.amr",0,100
+
+# MP3 to AMR
+https://www.onlineconverter.com/ --> Bit rate at 4,75
+
+# Google Translate TTS
+http://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=de&q=Willkommen%20im%20Safer%20Smart%20Home!%20Bitte%20geben%20Sie%20den%20Pin-Code%20gefolgt%20von%20einer%20Raute%20ein.
+http://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=de&q=Willkommen%20im%20Safer%20Smart%20Home!
+http://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=de&q=Bitte%20geben%20Sie%20den%20Pin-Code%20gefolgt%20von%20einer%20Raute%20ein.
+http://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=de&q=Der%20Pin-Code%20wurde%20akzeptiert!
+http://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=de&q=Der%20Pin-Code%20wurde%20nicht%20akzeptiert!
+http://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=de&q=Bitte%20geben%20Sie%20nun%20einen%20Aktionscode%20gefolgt%20von%20einer%20Raute%20ein!%20Der%20Aktionscode%20besteht%20aus%20einer%20Ger%C3%A4te-ID,%20einem%20Stern%20und%20einem%20Ger%C3%A4testatus.
+http://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=de&q=Der%20Aktionscode%20konnte%20erfolgreich%20durchgef%C3%BChrt%20werden!
+http://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=de&q=Der%20Aktionscode%20konnte%20nicht%20erfolgreich%20durchgef%C3%BChrt%20werden!
+http://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=de&q=Vielen%20Dank%20und%20auf%20Wiedersehen!%20Der%20Anruf%20wird%20nun%20beendet!
+http://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=de&q=F%C3%BCr%20einen%20weiteren%20Aktionscode%20geben%20Sie%20bitte%20nun%20eine%20Raute%20ein!%20Anderenfalls%20wird%20die%20Eingabe%20eines%20Sterns%20ben%C3%B6tigt!
